@@ -11,6 +11,9 @@ const app = express();
 mongoose.connect('mongodb://localhost/ninjago');
 mongoose.Promise = global.Promise;
 
+// frontend publick folder for create html
+app.use(express.static('public'));
+
 app.use(bodyParser.json());
 
 // initialize routes
